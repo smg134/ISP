@@ -1,123 +1,154 @@
  <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" href="styles.css">
-<style>
-body {
-    background-color: mistyrose;
-}
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-</style>
-<title>smg134 - Assignment #1</title>
-</head>
-<body>
-<h1 style="text-align:center;">Welcome to my page!</h1>
-<form style="text-align:right;">
-  Username:
-  <input type="text" name="username" value="">
-  Password:
-  <input type="password" name="password" value="">
-  <input type="submit" value="Submit">
-</form> 
-<p style="text-align:right;">If you click the "Submit" button, nothing will happen.</p>
-<h2>About this page</h2>
-<p>I'm not very creative and have absolutely no clue what I should put on this page.<br>
-So it's mostly going to be random things that meet the criteria of the assignment.</br></p>
-<p><a href="http://www.w3schools.com/html/html_links.asp">Here is a link</a> to the page where I <br>
-learned how to add that link to this page.</p>
+	<head>
+		<link rel="stylesheet" href="styles.css">
+		<style>
+			body {
+				background-color: mistyrose;
+			}
+			table, th, td {
+				border: 1px solid black;
+				border-collapse: collapse;
+			}	
+		</style>
+		<title>smg134 - Assignment #1</title>
+	</head>
+	<body>
+		<div class="header">
+			<h1 style="text-align:center;">Welcome to my page!</h1>
+		</div>
+		<form style="text-align:left;">
+			Username:
+			<input type="text" name="username" value="">
+			Password:
+			<input type="password" name="password" value="">
+			<input type="submit" value="Submit">
+		</form> 
+		<p style="text-align:left;">
+			<small>
+				If you click the "Submit" button, nothing will happen.
+			</small>
+		</p>
+		<div class="menu">
+			<ul>
+				<li>The Flight</li>
+				<li>The City</li>
+				<li>The Island</li>
+				<li>The Food</li>
+			</ul>
+		</div>
 
-<h3>Neat video I took in Japan</h3>
- <video width="320" height="240" controls>
-  <source src="video.mov" type="video/mp4">
-Your browser does not support the video tag.
-</video> 
-<hr>
-<h2>The Ballad of Aunt Jemima</h2>
-<p><i>An original work by Tanner Loeppky</i></p>
-<pre>
-Oh Aunty J., you entrance me so,
-Sweet smell of your pancakes through my windows will flow.
-Nothing but your sweet buttery flavor,
-Can possibly quell my ravenous behavior.
+		<div class="main">
+			<h2>About this page</h2>
+			<p>
+				I'm not very creative and have absolutely no clue what I should put on this page.
+				<br>
+				So it's mostly going to be random things that meet the criteria of the assignment.
+				</br>
+			</p>
+			<p>
+				<a href="http://www.w3schools.com/html/html_links.asp">Here is a link</a> to the page where I
+				<br>
+				learned how to add that link to this page.
+			</p>
+			<h3>Neat video I took in Japan</h3>
+			<video width="320" height="240" controls>
+				<source src="video.mov" type="video/mp4">
+				Your browser does not support the video tag.
+			</video> 
+			<hr>
+			<h2>The Ballad of Aunt Jemima</h2>
+			<p>
+				<i>An original work by Tanner Loeppky</i>
+			</p>
+			<pre>
+				Oh Aunty J., you entrance me so,
+				Sweet smell of your pancakes through my windows will flow.
+				Nothing but your sweet buttery flavor,
+				Can possibly quell my ravenous behavior.
 
-For when I am with you I can't help but crave,
-The sweet syrupy taste to me you once gave.
-Together we feasted deep into the night,
-Stirring and flipping and frying just right.
+				For when I am with you I can't help but crave,
+				The sweet syrupy taste to me you once gave.
+				Together we feasted deep into the night,
+				Stirring and flipping and frying just right.
 
-Oh sweet Jemima you're all that I need,
-Your callused hands skillfully forming my creed.
-Your leathery skin, oh so delightful,
-When others look at you I become oh so spiteful.
+				Oh sweet Jemima you're all that I need,
+				Your callused hands skillfully forming my creed.
+				Your leathery skin, oh so delightful,
+				When others look at you I become oh so spiteful.
 
-But there is more to you, than simply your craft,
-Anyone who cannot see past this is daft.
-A kind, caring soul is all that you are,
-A shining beacon of hope, seen from afar.
+				But there is more to you, than simply your craft,
+				Anyone who cannot see past this is daft.
+				A kind, caring soul is all that you are,
+				A shining beacon of hope, seen from afar.
 
-Thank you, Aunty for all that you've given,
-Your delectable breakfasts keeping me driven.
-Without you my mornings would be in disarray,
-So to your brand name I will continue to pray.
-</pre>
-<p>
-<i>Here is some music to go with the poem.</i><br>
-<audio controls>
-  <source src="music.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio></p>
-<hr>
-<h3>Here is an unordered list of stuff I need for this assignment:</h3>
-<ul style="list-style-type:square">
-  <li>Name and date</li>
-  <li>Paragraphs</li>
-  <li>Line breaks</li>
-  <li>Headings</li>
-  <li>Block quotations</li>
-  <li>Fonts and styles</li>
-  <li>Horizontal rules</li>
-  <li>Images</li>
-  <li>Links and targets</li>
-  <li>Unordered lists</li>
-  <li>Ordered lists</li>
-  <li>Tables</li>
-  <li>Forms</li>
-  <li>Audio</li>
-  <li>Video</li>
-</ul> 
-<h3>And here is an ordered list of groceries:</h3>
- <ol type="1">
-  <li>Milk</li>
-  <li>Paper towels</li>
-  <li>Cookies</li>
-  <li>Chicken marinade</li>
-</ol>
-<hr>
-<h2>The Three Largest Cities in Ohio</h2>
-<table style="width:15%">
-  <tr>
-    <th>City</th>
-    <th>Population</th>
-  </tr>
-    <tr>
-    <td>Columbus</td>
-    <td>822,553</td>
-  </tr>
-  <tr>
-    <td>Cleveland</td>
-    <td>390,113</td>
-  </tr>
-  <tr>
-	<td>Cincinnati</td>
-	<td>297,517</td>
-	<div><img src="image.jpg" style="width:304px;height:228px;"></div>
-</table>
-<small><i>Based on the <a href="http://www.census.gov/">2013 census.<a></i></small>
-</body>
-<br>
-<br>
-Sean Gaffney, finished on September 14, 2017 at 2:00 pm.
+				Thank you, Aunty for all that you've given,
+				Your delectable breakfasts keeping me driven.
+				Without you my mornings would be in disarray,
+				So to your brand name I will continue to pray.
+			</pre>
+			<p>
+				<i>Here is some music to go with the poem.</i>
+				<br>
+				<audio controls>
+					<source src="music.mp3" type="audio/mpeg">
+					Your browser does not support the audio element.
+				</audio>
+			</p>
+			<hr>
+			<h3>Here is an unordered list of stuff I need for this assignment:</h3>
+			<ul style="list-style-type:square">
+				<li>Name and date</li>
+				<li>Paragraphs</li>
+				<li>Line breaks</li>
+				<li>Headings</li>
+				<li>Block quotations</li>
+				<li>Fonts and styles</li>
+				<li>Horizontal rules</li>
+				<li>Images</li>
+				<li>Links and targets</li>
+				<li>Unordered lists</li>
+				<li>Ordered lists</li>
+				<li>Tables</li>
+				<li>Forms</li>
+				<li>Audio</li>
+				<li>Video</li>
+			</ul> 
+			<h3>And here is an ordered list of groceries:</h3>
+			<ol type="1">
+				<li>Milk</li>
+				<li>Paper towels</li>
+				<li>Cookies</li>
+				<li>Chicken marinade</li>
+			</ol>
+			<hr>
+			<h2>The Three Largest Cities in Ohio</h2>
+			<table style="width:15%">
+				<tr>
+					<th>City</th>
+					<th>Population</th>
+				</tr>
+				<tr>
+					<td>Columbus</td>
+					<td>822,553</td>
+				</tr>
+				<tr>
+					<td>Cleveland</td>
+					<td>390,113</td>
+				</tr>
+				<tr>
+					<td>Cincinnati</td>
+				<td>297,517</td>
+				<div>
+					<img src="image.jpg" style="width:304px;height:228px;">
+				</div>
+			</table>
+			<small>
+				<i>Based on the <a href="http://www.census.gov/">2013 census.<a></i>
+			</small>
+			<br>
+			<br>
+			Sean Gaffney, finished on September 14, 2017 at 2:00 pm.
+		</div>
+	</body>	
 </html> 
