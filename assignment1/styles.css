@@ -1,0 +1,15 @@
+h1 {
+    color: red;
+    font-family: verdana;
+    font-size: 300%;
+}
+h2 {
+	color: black;
+	font-family: times new roman;
+	font-size: 200%;
+}
+p  {
+    color: black;
+    font-family: arial;
+    font-size: 100%;
+}
