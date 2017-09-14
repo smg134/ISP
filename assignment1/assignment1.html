@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<link rel="stylesheet" href="styles.css">
@@ -15,26 +15,38 @@
 	</head>
 	<body>
 		<div class="header">
-			<h1 style="text-align:center;">Welcome to my page!</h1>
+			<h1 id="heading" style="text-align:center;">Welcome to my page!</h1>
 		</div>
-		<form style="text-align:left;">
+		<form id="form" style="text-align:left;">
 			Username:
 			<input type="text" name="username" value="">
 			Password:
 			<input type="password" name="password" value="">
 			<input type="submit" value="Submit">
 		</form> 
-		<p style="text-align:left;">
+		<p id="paragraph" style="text-align:left;">
 			<small>
 				If you click the "Submit" button, nothing will happen.
 			</small>
 		</p>
 		<div class="menu">
-			<ul>
-				<li>The Flight</li>
-				<li>The City</li>
-				<li>The Island</li>
-				<li>The Food</li>
+			<ul id="unordered-list">
+				<li><a href="#name-date">Name and date</a></li>
+				<li><a href="#paragraph">Paragraphs</a></li>
+				<li><a href="#line-break">Line breaks</a></li>
+				<li><a href="#heading">Headings</a></li>
+				<li><a href="#block-quote">Block quotations</a></li>
+				<li><a href="#font-style">Fonts and styles</a></li>
+				<li><a href="#hr">Horizontal rules</a></li>
+				<li><a href="#image">Images</a></li>
+				<li><a href="#link-target">Links and targets</a></li>
+				<li><a href="#unordered-list">Unordered lists</a></li>
+				<li><a href="#ordered-list">Ordered lists</a></li>
+				<li><a href="#table">Tables</a></li>
+				<li><a href="#form">Forms</a></li>
+				<li><a href="#audio">Audio</a></li>
+				<li><a href="#video">Video</a></li>
+			</ul>
 			</ul>
 		</div>
 
@@ -42,80 +54,62 @@
 			<h2>About this page</h2>
 			<p>
 				I'm not very creative and have absolutely no clue what I should put on this page.
-				<br>
+				<br id="line-break">
 				So it's mostly going to be random things that meet the criteria of the assignment.
 				</br>
 			</p>
-			<p>
+			<p id="link-target">
 				<a href="http://www.w3schools.com/html/html_links.asp">Here is a link</a> to the page where I
 				<br>
 				learned how to add that link to this page.
 			</p>
-			<h3>Neat video I took in Japan</h3>
+			<h3 id="video">Neat video I took in Japan</h3>
 			<video width="320" height="240" controls>
 				<source src="video.mov" type="video/mp4">
 				Your browser does not support the video tag.
 			</video> 
-			<hr>
+			<hr id="hr">
 			<h2>The Ballad of Aunt Jemima</h2>
-			<p>
+			<p id="font-style">
 				<i>An original work by Tanner Loeppky</i>
 			</p>
-			<pre>
-				Oh Aunty J., you entrance me so,
-				Sweet smell of your pancakes through my windows will flow.
-				Nothing but your sweet buttery flavor,
-				Can possibly quell my ravenous behavior.
+			<pre id="block-quote">
+Oh Aunty J., you entrance me so,
+Sweet smell of your pancakes through my windows will flow.
+Nothing but your sweet buttery flavor,
+Can possibly quell my ravenous behavior.
 
-				For when I am with you I can't help but crave,
-				The sweet syrupy taste to me you once gave.
-				Together we feasted deep into the night,
-				Stirring and flipping and frying just right.
+For when I am with you I can't help but crave,
+The sweet syrupy taste to me you once gave.
+Together we feasted deep into the night,
+Stirring and flipping and frying just right.
 
-				Oh sweet Jemima you're all that I need,
-				Your callused hands skillfully forming my creed.
-				Your leathery skin, oh so delightful,
-				When others look at you I become oh so spiteful.
+Oh sweet Jemima you're all that I need,
+Your callused hands skillfully forming my creed.
+Your leathery skin, oh so delightful,
+When others look at you I become oh so spiteful.
 
-				But there is more to you, than simply your craft,
-				Anyone who cannot see past this is daft.
-				A kind, caring soul is all that you are,
-				A shining beacon of hope, seen from afar.
+But there is more to you, than simply your craft,
+Anyone who cannot see past this is daft.
+A kind, caring soul is all that you are,
+A shining beacon of hope, seen from afar.
 
-				Thank you, Aunty for all that you've given,
-				Your delectable breakfasts keeping me driven.
-				Without you my mornings would be in disarray,
-				So to your brand name I will continue to pray.
+Thank you, Aunty for all that you've given,
+Your delectable breakfasts keeping me driven.
+Without you my mornings would be in disarray,
+So to your brand name I will continue to pray.
 			</pre>
 			<p>
 				<i>Here is some music to go with the poem.</i>
-				<br>
+				<br id="audio">
 				<audio controls>
 					<source src="music.mp3" type="audio/mpeg">
 					Your browser does not support the audio element.
 				</audio>
 			</p>
-			<hr>
-			<h3>Here is an unordered list of stuff I need for this assignment:</h3>
-			<ul style="list-style-type:square">
-				<li>Name and date</li>
-				<li>Paragraphs</li>
-				<li>Line breaks</li>
-				<li>Headings</li>
-				<li>Block quotations</li>
-				<li>Fonts and styles</li>
-				<li>Horizontal rules</li>
-				<li>Images</li>
-				<li>Links and targets</li>
-				<li>Unordered lists</li>
-				<li>Ordered lists</li>
-				<li>Tables</li>
-				<li>Forms</li>
-				<li>Audio</li>
-				<li>Video</li>
-			</ul> 
-			<h3>And here is an ordered list of groceries:</h3>
-			<ol type="1">
+			<hr> 
+			<h3>Here is an ordered list of groceries:</h3>
+			<ol id="ordered-list" type="1">
 				<li>Milk</li>
 				<li>Paper towels</li>
 				<li>Cookies</li>
@@ -123,7 +117,7 @@
 			</ol>
 			<hr>
 			<h2>The Three Largest Cities in Ohio</h2>
-			<table style="width:15%">
+			<table id="table" style="width:15%">
 				<tr>
 					<th>City</th>
 					<th>Population</th>
@@ -139,7 +133,7 @@
 				<tr>
 					<td>Cincinnati</td>
 				<td>297,517</td>
-				<div>
+				<div id="image">
 					<img src="image.jpg" style="width:304px;height:228px;">
 				</div>
 			</table>
@@ -148,7 +142,9 @@
 			</small>
 			<br>
 			<br>
+			<div id="name-date">
 			Sean Gaffney, finished on September 14, 2017 at 2:00 pm.
+			</div>
 		</div>
 	</body>	
 </html> 
