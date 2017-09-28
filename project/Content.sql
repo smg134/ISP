@@ -1,0 +1,11 @@
+USE ISP_smg134;
+DROP TABLE IF EXISTS Content;
+
+CREATE TABLE Content 
+(
+	title VARCHAR(255) NOT NULL,
+	content TEXT NOT NULL,
+	owner CHAR(16) NOT NULL,
+
+	PRIMARY KEY (owner)
+);

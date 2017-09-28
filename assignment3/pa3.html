@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+background-color: lightblue;
+}
+</style>
+<body>
+Sean Gaffney - smg134@zips.uakron.edu
+<h1> A Simple Animation Studio Creator </h1>
+
+<table border="1" style="width:100%">
+    <tr>
+        <th>Item</th>
+        <th>Description</th>
+        <th>Action</th>
+    </tr>
+	<tr>
+		<td><form id="title">Title: <input type="text" name="title" value=""></form></td>
+		<td>Set title of the page</td>
+		<td><button onclick="setTitle()">Set</td>
+	<tr>
+		<td><form id="mainHeader">Header: <input type="text" name="mainHeader" value=""> Color: <input type="text" name="mainHeaderColor" value="black"></form></td>
+		<td>Add a large custom header</td>
+		<td><button onclick="addHeader()">Add</td>
+	</tr>
+	<tr>
+		<td><form id="subHeader">Subheader: <input type="text" name="subHeader" value=""> Color: <input type="text" name="subHeaderColor" value="black"></form></td>
+		<td>Add a custom subheader</td>
+		<td><button onclick="addSubheader()">Add</td>
+	</tr>
+	<tr>
+		<td><form id="backgroundColor">Background color: <input type="text" name="backgroundColor" value="white"></form></td>
+		<td>Set the background color</td>
+		<td><button onclick="setBackground()">Set</td>
+	</tr>
+	<tr>
+		<td><form id="paragraph">Paragraph: <input type="text" name="paragraph" value=""> Color: <input type="text" name="paragraphColor" value="black"></form></td>
+		<td>Add paragraph of text</td>
+		<td><button onclick="addParagraph()">Add</td>
+	</tr>
+	<tr>
+		<td><form id="container">Width: <input type="text" name="containerWidth" value="400px"> Height: <input type="text" name="containerHeight" value="400px"> Color: <input type="text" name="containerColor" value="yellow"></form></td>
+		<td>Create container for animation</td>
+		<td><button onclick="createContainer()">Create</td>
+	</tr>
+	<tr>
+		<td><form id="animate">Width: <input type="text" name="animateWidth" value="50px"> Height: <input type="text" name="animateHeight" value="50px"> Color: <input type="text" name="animateColor" value="red"></form></td>
+		<td>Create animate element for animation</td>
+		<td><button onclick="createAnimate()">Create</td>
+	</tr>
+	<tr>
+		<td><form id="animationType">Animation Type: </form><select name="animationList" form="animationType"><option value=1>Down</option><option value=2>Right</option><option value=3>Diagonal</option></select></td>
+		<td>Select the type of animation</td>
+		<td><button onclick="animationType()">Select</td>
+	</tr>
+	<tr>
+		<td>Button</td>
+		<td>Add button to start the animation</td>
+		<td><button onclick="addButton()">Add</td>
+	</tr>
+	<tr>
+		<td><form id="image">Image (URL): <input type="text" name="image" value=""> Width: <input type="text" name="imageWidth" value="320px"> Height: <input type="text" name="imageHeight" value="240px"></form></td>
+		<td>Display image (by URL)</td>
+		<td><button onclick="addImage()">Add</td>
+	</tr>
+	<tr>
+		<td><form id="imageButton">Image (URL): <input type="text" name="imageButton" value=""></td>
+		<td>Add button that opens new window of an image</td>
+		<td><button onclick="addImageButton()">Add</td>
+	<tr>
+    <tr>
+        <td>Show</td>
+        <td>Show the design window</td>
+        <td><button onclick="showWin()">Show</button></td>
+    </tr>
+    <tr>
+        <td>Close</td>
+        <td>Close the design window</td>
+        <td><button onclick="closeWindow()">Close</button></td>
+    </tr>
+</table>
+
+        <script>
+        var page = "<p></p>";
+		var animatePage = "";
+        var myWindow;
+        
+		function setTitle() {
+			page += "<title>" + document.getElementById("title")[0].value + "</title>";
+		}
+		
+		function addHeader() {
+			page += "<h1 style=\"color:" + document.getElementById("mainHeader")[1].value + "\">" + document.getElementById("mainHeader")[0].value + "</h1>";
+		}
+		
+		function addSubheader() {
+			page +=  "<h2 style=\"color:" + document.getElementById("subHeader")[1].value + "\">" + document.getElementById("subHeader")[0].value + "</h2>";
+		}
+		
+		function setBackground() {
+			page += "<style>body{background-color: " + document.getElementById("backgroundColor")[0].value + ";}</style>"
+		}
+		
+		function addParagraph() {
+			page += "<p style=\"color:" + document.getElementById("paragraph")[1].value + "\">" + document.getElementById("paragraph")[0].value + "</p>";
+		}
+		
+		function createContainer() {
+			page += "<style>#container{width: " + document.getElementById("container")[0].value + "; height: " + document.getElementById("container")[1].value + "; postition: relative; background: " + document.getElementById("container")[2].value + "; }";
+		}
+		
+		function createAnimate() {
+			page += "#animate { width: " + document.getElementById("animate")[0].value + "; height: " + document.getElementById("animate")[1].value + "; position: absolute; background-color: " + document.getElementById("animate")[2].value + "; }</style><body><div id = \"container\"><div id = \"animate\"></div></div>";
+		}
+		
+		function animationType() {
+			var type = document.getElementById("animationType")[0].value;
+			if (type == 1) {
+				page += "<script>function Move() { var elem = document.getElementById(" + "\"" + "animate" + "\""  + "); var pos = 0; var id = setInterval(frame, 5); function frame() { if (pos == 350) { clearInterval(id); } else { pos++;  elem.style.top = pos + 'px'; } } }";
+				page += "</scr" + "ipt>";
+			}
+			else if (type == 2) {
+				page += "<script>function Move() { var elem = document.getElementById(" + "\"" + "animate" + "\""  + "); var pos = 0; var id = setInterval(frame, 5); function frame() { if (pos == 350) { clearInterval(id); } else { pos++;  elem.style.left = pos + 'px'; } } }";
+				page += "</scr" + "ipt>";
+			}
+			else if (type == 3) {
+				page += "<script>function Move() { var elem = document.getElementById(" + "\"" + "animate" + "\""  + "); var pos = 0; var id = setInterval(frame, 5); function frame() { if (pos == 350) { clearInterval(id); } else { pos++;  elem.style.top = pos + 'px';  elem.style.left = pos + 'px'; } } }";
+				page += "</scr" + "ipt>";
+			}
+		}
+		
+		function addButton() {
+			page += "<button onclick=\"Move()\">Start</button>";
+		}
+		
+		function addImage() {
+			page += "<img src=\"" + document.getElementById("image")[0].value + "\" alt=\"Image not found\" style=\"width:" + document.getElementById("image")[1].value + ";height:" + document.getElementById("image")[2].value + ";\">";
+		}
+		
+		function addImageButton() {
+            page += "<button onclick='window.open(" + "\"" + document.getElementById("imageButton")[0].value + "\"" + ")'>Examples</button>";
+		}
+		
+        function showWin() {
+            myWindow = window.open("", "", "width=1080,height=720");
+            myWindow.document.write(page);
+        }
+		
+        function closeWindow() {
+            myWindow.close();
+        }
+        </script>
+ 
+ <h2> Features </h2>
+        <table border="1" style="width:100%">
+            <tr>
+                <th>HTML</th>
+                <th>CSS</th>
+                <th>JavaScript</th>
+                <th>XML</th>
+                <th>Others</th>
+            </tr>
+            <tr>
+                <th>Header</th>
+                <th>Text color</th>
+                <th>Event-based actions</th>
+                <th>.</th>
+                <th>.</th>
+            </tr>
+			<tr>
+				<th>Subheader</th>
+				<th>Background color</th>
+                <th>Animation functions</th>
+                <th>.</th>
+                <th>.</th>
+			<tr>
+			<tr>
+				<th>Paragraph</th>
+                <th>Create animation elements</th>
+                <th>Open window</th>
+				<th>.</th>
+                <th>.</th>
+            <tr>
+			<tr>
+				<th>Button</th>
+                <th>.</th>
+                <th>.</th>
+				<th>.</th>
+                <th>.</th>
+            <tr>
+			<tr>
+				<th>Title</th>
+                <th>.</th>
+                <th>.</th>
+				<th>.</th>
+                <th>.</th>
+            <tr>
+			<tr>
+				<th>Images</th>
+                <th>.</th>
+                <th>.</th>
+				<th>.</th>
+                <th>.</th>
+            <tr>
+        </table>         
+    </body>
+</html>

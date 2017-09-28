@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+background-color: lightblue;
+}
+</style>
+<head>
+<title>Create page</title>
+<body>
+<a href='http://pausch.cs.uakron.edu/~smg134/project/index.html'>Home</a>-----<a href='http://pausch.cs.uakron.edu/~smg134/project/login.html'>Logout</a>-----<a href='http://pausch.cs.uakron.edu/~smg134/project/help.html'>Help</a><br />
+<h1> Create Page </h1>
+<table border="1" style="width:100%">
+    <tr>
+        <th>Item</th>
+        <th>Description</th>
+        <th>Action</th>
+    </tr>
+	<tr>
+		<td><form id="title">Title: <input type="text" name="title" value=""></form></td>
+		<td>Set title of the page</td>
+		<td><button onclick="setTitle()">Set</td>
+	<tr>
+		<td><form id="mainHeader">Header: <input type="text" name="mainHeader" value=""> Color: <input type="text" name="mainHeaderColor" value="black"></form></td>
+		<td>Add a large custom header</td>
+		<td><button onclick="addHeader()">Add</td>
+	</tr>
+	<tr>
+		<td><form id="subHeader">Subheader: <input type="text" name="subHeader" value=""> Color: <input type="text" name="subHeaderColor" value="black"></form></td>
+		<td>Add a custom subheader</td>
+		<td><button onclick="addSubheader()">Add</td>
+	</tr>
+	<tr>
+		<td><form id="paragraph">Paragraph: <input type="text" name="paragraph" value=""> Color: <input type="text" name="paragraphColor" value="black"></form></td>
+		<td>Add paragraph of text</td>
+		<td><button onclick="addParagraph()">Add</td>
+	</tr>
+	<tr>
+		<td><form id="image">Image (URL): <input type="text" name="image" value=""> Width: <input type="text" name="imageWidth" value="320px"> Height: <input type="text" name="imageHeight" value="240px"></form></td>
+		<td>Display image (by URL)</td>
+		<td><button onclick="addImage()">Add</td>
+	</tr>
+	<tr>
+		<td><form id="backgroundColor">Background color: <input type="text" name="backgroundColor" value="white"></form></td>
+		<td>Set the background color</td>
+		<td><button onclick="setBackground()">Set</td>
+	</tr>
+</table>
+
+<form id="createForm" name="createForm" method="post" action="http://pausch.cs.uakron.edu/~smg134/project/create.php">
+<input type="text" name="username" id="username" value="User">
+<input type="hidden" name="page" id="page" value="">
+<input type="hidden" name="title" id="title" value="">
+<button onclick="create()">Create Page</button></form>
+<p>If you leave 'User' field blank, no one will know who made the page!</p>
+
+<script>
+		var title = "Title";
+        var page = "";
+        var myWindow;
+        
+		function setTitle() {
+			page += "<title>" + document.getElementById("title")[0].value + "</title>";
+			title = document.getElementById("title")[0].value;
+		}
+		
+		function addHeader() {
+			page += "<h1 style=\"color:" + document.getElementById("mainHeader")[1].value + "\">" + document.getElementById("mainHeader")[0].value + "</h1>";
+		}
+		
+		function addSubheader() {
+			page +=  "<h2 style=\"color:" + document.getElementById("subHeader")[1].value + "\">" + document.getElementById("subHeader")[0].value + "</h2>";
+		}
+		
+		function addParagraph() {
+			page += "<p style=\"color:" + document.getElementById("paragraph")[1].value + "\">" + document.getElementById("paragraph")[0].value + "</p>";
+		}
+		
+		function addImage() {
+			page += "<img src=\"" + document.getElementById("image")[0].value + "\" alt=\"Image not found\" style=\"width:" + document.getElementById("image")[1].value + ";height:" + document.getElementById("image")[2].value + ";\">";
+		}
+		
+		function setBackground() {
+			page += "<style>body{background-color: " + document.getElementById("backgroundColor")[0].value + ";}</style>"
+		}
+		
+        function showWin() {
+            myWindow = window.open("", "", "width=1080,height=720");
+            myWindow.document.write(page);
+        }
+		
+        function create() {
+			document.createForm.title.value = title;
+            document.createForm.page.value = page;
+			document.forms["createForm"].submit();
+        }
+        </script>       
+    </body>
+</html>

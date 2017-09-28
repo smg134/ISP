@@ -1,0 +1,1 @@
+Couldn't figure out why access was being denied, also not even sure if the .jsp code is anywhere near correct. The examples given in public_jsp.zip didn't even work properly so I winged it and did my best.
