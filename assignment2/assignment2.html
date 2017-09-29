@@ -1,52 +1,33 @@
 <!DOCTYPE html>
 <html>
+	<style>
+	#id4 {
+		position: absolute;
+	}
+	</style>
 	<title>smg134 - Assignment #2</title>
 	<head>
+		<script type="text/javascript" src="javascript.js" ></script>
 	</head>
 	<body>
 		<form>
 			Calculate Factorial: <input id="id1" type="number" value="8">
 			<button onclick="return factorial();">Calculate!</button>
 		</form>
-		<p id="result"></p>
+		<p id="id1_result"></p>
+		<form>
+			Email: <input id="id2" type="text">
+			<button onclick="return validate();">Validate!</button>
+		</form>
+		<p id="id2_result"></p>
+		<form>
+			Email: <input id="id3" type="text" oninput="return realTimeValidate();">
+		</form>
+		<p id="id3_result"></p>
+		<div id="id4">
+			<img src="image.png" style="width:300px;height:200px;">
+		</div>
+		<div id="id5">
+		</div>
 	</body>
-	<script>
-		function factorial() {
-			var val = 1;
-			var n = document.getElementById("id1").value;
-			if (n < 0) alert("Number cannot be negative");
-			for (var i = 2; i <= n; i++)
-				val = val * i;
-			if (val > 0  && val <= 100) {
-				document.getElementById("result").style.fontSize = "xx-small";
-				document.getElementById("result").style.color = "purple";	
-			}
-			if (val > 100 && val <= 1000) {
-				document.getElementById("result").style.fontSize = "x-small";
-				document.getElementById("result").style.color = "blue";
-			}
-			if (val > 1000 && val <= 10000) {
-				document.getElementById("result").style.fontSize = "small";
-				document.getElementById("result").style.color = "green";
-			}
-			if (val > 10000 && val <= 100000) {
-				document.getElementById("result").style.fontSize = "medium";
-				document.getElementById("result").style.color = "yellow";
-			}
-			if (val > 100000 && val <= 1000000) {
-				document.getElementById("result").style.fontSize = "large";
-				document.getElementById("result").style.color = "orange";
-			}
-			if (val > 1000000 && val <= 10000000) {
-				document.getElementById("result").style.fontSize = "x-large";
-				document.getElementById("result").style.color = "red";
-			}
-			if (val > 10000000) {
-				document.getElementById("result").style.fontSize = "xx-large";
-				document.getElementById("result").style.color = "red";
-			}
-			document.getElementById("result").innerHTML = val;
-			return false;
-		}
-		</script>
 </html>
