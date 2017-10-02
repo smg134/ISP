@@ -1,7 +1,10 @@
 function factorial() {
 	var val = 1;
 	var n = document.getElementById("id1").value;
-	if (n < 0) alert("Number cannot be negative");
+	if (n < 0) { 
+		alert("Number cannot be negative");
+		return false;
+	}
 	for (var i = 2; i <= n; i++)
 		val = val * i;
 	if (val > 0  && val <= 100) {
@@ -70,4 +73,4 @@ function moveImage(e) {
 	}	
 }
 
-document.addEventListener("click", moveImage);
+document.getElementById("main").addEventListener("click", moveImage);
