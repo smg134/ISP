@@ -28,6 +28,10 @@
 	position: absolute;
 }
 
+#id1 {
+	background-color: white;
+}
+
 #id1_result {
 	text-align: center;
 }
@@ -37,9 +41,17 @@
 	position: relative;
 }
 
+#id2 {
+	background-color: white;
+}
+
 #id2_form {
 	left: 22%;
 	position: relative;
+}
+
+#id3 {
+	background-color: white;
 }
 
 #id3_form {

@@ -2,8 +2,12 @@ function factorial() {
 	var val = 1;
 	var n = document.getElementById("id1").value;
 	if (n < 0) { 
+		document.getElementById("id1").style.backgroundColor = "#FA8072";
 		alert("Number cannot be negative");
 		return false;
+	}
+	else {
+		document.getElementById("id1").style.backgroundColor = "white";
 	}
 	for (var i = 2; i <= n; i++)
 		val = val * i;
@@ -42,7 +46,11 @@ function factorial() {
 function validate() {
 	var str = document.getElementById("id2").value;
 	if (/[!#$%^&*()]/.test(str)) {
+		document.getElementById("id2").style.backgroundColor = "#FA8072";
 		alert("Email contains invalid characters ! # $ % ^ & * ( )");
+	}
+	else {
+		document.getElementById("id2").style.backgroundColor = "white";
 	}
 	return false;
 }
@@ -50,7 +58,11 @@ function validate() {
 function realTimeValidate() {
 	var str = document.getElementById("id3").value;
 	if (/[!#$%^&*()]/.test(str)) {
+		document.getElementById("id3").style.backgroundColor = "#FA8072";
 		alert("Email contains invalid characters ! # $ % ^ & * ( )");
+	}
+	else {
+		document.getElementById("id3").style.backgroundColor = "white";
 	}
 	return false;
 }
