@@ -4,23 +4,69 @@
 	<head>
 		<div class="navbar">
 			<ul>
-				<li><a href="#">Title</a></li>
-				<li><a href="#">Header</a></li>
-				<li><a href="#">Subheader</a></li>
-				<li><a href="#">Paragraph</a></li>
+				<li><a href="javascript:void(0)" onclick="displayTitle();">Title</a></li>
+				<li><a href="javascript:void(0)" onclick="displayHeader();">Header</a></li>
+				<li><a href="javascript:void(0)" onclick="displaySubheader();">Subheader</a></li>
+				<li><a href="javascript:void(0)" onclick="displayParagraph();">Paragraph</a></li>
 				<li class="dropdown">
 					<a href="javascript:void(0)" class="dropbtn">Background</a>
 					<div class="dropdown-content">
-						<a href="#">Color</a>
-						<a href="#">Image</a>
+						<a href="javascript:void(0)" onclick="displayBackgroundColor();">Color</a>
+						<a href="javascript:void(0)" onclick="displayBackgroundImage();">Image</a>
 					</div>
 				</li>
-				<li><a href="#">Images</a></li>
-				<li><a href="#">Animation</a></li>
-				<li style="float: right;"><a href="#">Undo</li>
+				<li><a href="javascript:void(0)" onclick="displayImage();">Image</a></li>
+				<li><a href="javascript:void(0)" onclick="displayAnimation();">Animation</a></li>
+				<li style="float: right;"><a href="#">Undo</a></li>
 			</ul>
 		</div>
-		<div class="main"></div>
+		<div class="main">
+			<div id="title">
+				<p>Enter your desired title for this page, it will appear in place of the page's URL when viewed as a tab.</p>
+				<form id="title_form">
+					Title: <input type="text" name="title" value="">
+					<button onclick="setTitle()">Set</button>
+				</form>
+			</div>
+			<div id="header" style="display:none">
+				<p>Enter the text that you want to appear as a header on the page. This text will be large. You may also select a desired color.</p>
+				<form id="header_form">
+					Header: <input type="text" name="header" value="">
+					Color: <input type="text" name="headerColor" value="black">
+					<button onclick="addHeader()">Add</button>
+				</form>
+			</div>
+			<div id="subheader" style="display:none">
+				<form id="subheader_form">
+					Subheader: <input type="text" name="subheader" value="">
+					Color: <input type="text" name="subheaderColor" value="black">
+				</form>
+			</div>
+			<div id="paragraph" style="display:none">
+				<form id="paragraph_form">
+					Paragraph: <input type="text" name="paragraph" value="">
+					Color: <input type="text" name="paragraphColor" value="black">
+					<button onclick="addParagraph()">Add</button>
+				</form>
+			</div>
+			<div id="bg-color" style="display:none">
+				<form id="bg-color_form">
+					Background color: <input type="text" name="backgroundColor" value="white">
+					<button onclick="setBackground()">Set</button>
+				</form>
+			</div>
+			<div id="bg-image" style="display:none"></div>
+			<div id="image" style="display:none">
+				<form id="image">
+					Image (URL): <input type="text" name="image" value="">
+					Width: <input type="text" name="imageWidth" value="320px">
+					Height: <input type="text" name="imageHeight" value="240px">
+					<button onclick="addImage()">Add</button>
+				</form>
+			</div>
+			<div id="animation" style="display:none"></div>
+		</div>
 		<div class="preview"></div>
 	</head>
+	<script type="text/javascript" src="javascript.js" ></script>
 <html>

@@ -76,3 +76,43 @@
 	position: absolute;
 	top: 142px;
 }
+
+#title {
+	left: 10%;
+	position: absolute;
+}
+
+#header {
+	left: 10%;
+	position: absolute;
+}
+
+#subheader {
+	left: 10%;
+	position: absolute;
+}
+
+#paragraph {
+	left: 10%;
+	position: absolute;
+}
+
+#bg-color {
+	left: 10%;
+	position: absolute;
+}
+
+#bg-image {
+	left: 10%;
+	position: absolute;
+}
+
+#image {
+	left: 10%;
+	position: relative;
+}
+
+#animation {
+	left: 10%;
+	position: absolute;
+}
