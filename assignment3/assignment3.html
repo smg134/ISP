@@ -29,42 +29,132 @@
 				</form>
 			</div>
 			<div id="header" style="display:none">
-				<p>Enter the text that you want to appear as a header on the page. This text will be large. You may also select a desired color.</p>
+				<p>Enter the text that you want to appear as a header on the page. This text will be large. You may also select a color.</p>
 				<form id="header_form">
 					Header: <input type="text" name="header" value="">
-					Color: <input type="text" name="headerColor" value="black">
+					Color:
+					<select name="header-color" value="black">
+						<option value="black">Black</option>
+						<option value="white">White</option>
+						<option value="blue">Blue</option>
+						<option value="purple">Purple</option>
+						<option value="green">Green</option>
+						<option value="yellow">Yellow</option>
+						<option value="orange">Orange</option>
+						<option value="red">Red</option>
+					</select>
 					<button onclick="addHeader()">Add</button>
 				</form>
 			</div>
 			<div id="subheader" style="display:none">
+				<p>Enter the text you want to appear as a subheader on the page. This text will be medium-sized. You may also select a color.</p>
 				<form id="subheader_form">
 					Subheader: <input type="text" name="subheader" value="">
-					Color: <input type="text" name="subheaderColor" value="black">
+					Color:
+					<select name="subheader-color" value="black">
+						<option value="black">Black</option>
+						<option value="white">White</option>
+						<option value="blue">Blue</option>
+						<option value="purple">Purple</option>
+						<option value="green">Green</option>
+						<option value="yellow">Yellow</option>
+						<option value="orange">Orange</option>
+						<option value="red">Red</option>
+					</select>	
+					
+					<button onclick="addSubheader()">Add</button>
 				</form>
 			</div>
 			<div id="paragraph" style="display:none">
+				<p>Type a paragraph to appear on the page. This will be standard-sized text. You may also select a font color.</p>
 				<form id="paragraph_form">
 					Paragraph: <input type="text" name="paragraph" value="">
-					Color: <input type="text" name="paragraphColor" value="black">
+					Color:
+					<select name="paragraph-color" value="black">
+						<option value="black">Black</option>
+						<option value="white">White</option>
+						<option value="blue">Blue</option>
+						<option value="purple">Purple</option>
+						<option value="green">Green</option>
+						<option value="yellow">Yellow</option>
+						<option value="orange">Orange</option>
+						<option value="red">Red</option>
+					</select>	
 					<button onclick="addParagraph()">Add</button>
 				</form>
 			</div>
 			<div id="bg-color" style="display:none">
+				<p>Select a background color. This will overwrite any background image.</p>
 				<form id="bg-color_form">
-					Background color: <input type="text" name="backgroundColor" value="white">
-					<button onclick="setBackground()">Set</button>
+					Background color: 
+					<select name="bg-color" value="white">
+						<option value="white">White</option>
+						<option value="black">Black</option>
+						<option value="blue">Blue</option>
+						<option value="purple">Purple</option>
+						<option value="green">Green</option>
+						<option value="yellow">Yellow</option>
+						<option value="orange">Orange</option>
+						<option value="red">Red</option>
+					</select>
+  				<button onclick="setBackgroundColor()">Set</button>
 				</form>
 			</div>
-			<div id="bg-image" style="display:none"></div>
-			<div id="image" style="display:none">
-				<form id="image">
+			<div id="bg-image" style="display:none">
+				<p>Enter an image URL to be used as the background of the page. This will overwrite any background color.</p>
+				<form id="bg-image_form">
 					Image (URL): <input type="text" name="image" value="">
-					Width: <input type="text" name="imageWidth" value="320px">
-					Height: <input type="text" name="imageHeight" value="240px">
+					<button onclick="setBackgroundImage()">Set</button>
+			</div>
+			<div id="image" style="display:none">
+				<p>Enter an image URL and input your desired dimensions for it.</p>
+				<form id="image_form">
+					Image (URL): <input type="text" name="image" value="">
+					Width: <input type="text" name="imageWidth" value="320px" style="width:40px">
+					Height: <input type="text" name="imageHeight" value="240px" style="width:40px">
 					<button onclick="addImage()">Add</button>
 				</form>
 			</div>
-			<div id="animation" style="display:none"></div>
+			<div id="animation" style="display:none">
+				<p><b><u>Container:________________________________|Animation:______________________________|Style:</u></b></p>
+				<form id="container_form" style="float:left; margin-right:15px">
+					Width: <input type="text" name="containerWidth" value="400px" style="width:40px">
+					Height: <input type="text" name="containerHeight" value="400px" style="width:40px">
+					Color:
+					<select name="container-color" value="black">
+						<option value="black">Black</option>
+						<option value="white">White</option>
+						<option value="blue">Blue</option>
+						<option value="purple">Purple</option>
+						<option value="green">Green</option>
+						<option value="yellow">Yellow</option>
+						<option value="orange">Orange</option>
+						<option value="red">Red</option>
+					</select>
+				</form>
+				<form id="animate_form" style="float:left; margin-right:15px">
+					Width: <input type="text" name="animateWidth" value="50px" style="width:40px"> 
+					Height: <input type="text" name="animateHeight" value="50px" style="width:40px">
+					Color:
+					<select name="animate-color" value="white">
+						<option value="white">White</option>
+						<option value="black">Black</option>
+						<option value="blue">Blue</option>
+						<option value="purple">Purple</option>
+						<option value="green">Green</option>
+						<option value="yellow">Yellow</option>
+						<option value="orange">Orange</option>
+						<option value="red">Red</option>
+					</select>
+				</form>
+				<form id="animation-style" style="float:left">
+					<select name="animate-style">
+						<option value=1>Down</option>
+						<option value=2>Right</option>
+						<option value=3>Diagonal</option>
+					</select>
+				</form>
+			</div>
 		</div>
 		<div class="preview"></div>
 	</head>
