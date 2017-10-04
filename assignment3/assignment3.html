@@ -25,7 +25,7 @@
 				<p>Enter your desired title for this page, it will appear in place of the page's URL when viewed as a tab.</p>
 				<form id="title_form">
 					Title: <input type="text" name="title" value="">
-					<button onclick="setTitle()">Set</button>
+					<button onclick="return setTitle()">Set</button>
 				</form>
 			</div>
 			<div id="header" style="display:none">
@@ -43,7 +43,7 @@
 						<option value="orange">Orange</option>
 						<option value="red">Red</option>
 					</select>
-					<button onclick="addHeader()">Add</button>
+					<button onclick="return addHeader()">Add</button>
 				</form>
 			</div>
 			<div id="subheader" style="display:none">
@@ -62,7 +62,7 @@
 						<option value="red">Red</option>
 					</select>	
 					
-					<button onclick="addSubheader()">Add</button>
+					<button onclick="return addSubheader()">Add</button>
 				</form>
 			</div>
 			<div id="paragraph" style="display:none">
@@ -80,7 +80,7 @@
 						<option value="orange">Orange</option>
 						<option value="red">Red</option>
 					</select>	
-					<button onclick="addParagraph()">Add</button>
+					<button onclick="return addParagraph()">Add</button>
 				</form>
 			</div>
 			<div id="bg-color" style="display:none">
@@ -97,22 +97,22 @@
 						<option value="orange">Orange</option>
 						<option value="red">Red</option>
 					</select>
-  				<button onclick="setBackgroundColor()">Set</button>
+  				<button onclick="return setBackgroundColor()">Set</button>
 				</form>
 			</div>
 			<div id="bg-image" style="display:none">
 				<p>Enter an image URL to be used as the background of the page. This will overwrite any background color.</p>
 				<form id="bg-image_form">
 					Image (URL): <input type="text" name="image" value="">
-					<button onclick="setBackgroundImage()">Set</button>
+					<button onclick="return setBackgroundImage()">Set</button>
 			</div>
 			<div id="image" style="display:none">
 				<p>Enter an image URL and input your desired dimensions for it.</p>
 				<form id="image_form">
-					Image (URL): <input type="text" name="image" value="">
+					Image (URL): <input type="text" name="imageInput" value="">
 					Width: <input type="text" name="imageWidth" value="320px" style="width:40px">
 					Height: <input type="text" name="imageHeight" value="240px" style="width:40px">
-					<button onclick="addImage()">Add</button>
+					<button onclick="return addImage()">Add</button>
 				</form>
 			</div>
 			<div id="animation" style="display:none">
@@ -147,16 +147,19 @@
 						<option value="red">Red</option>
 					</select>
 				</form>
-				<form id="animation-style" style="float:left">
+				<form id="animation-style_form" style="float:left">
 					<select name="animate-style">
 						<option value=1>Down</option>
 						<option value=2>Right</option>
 						<option value=3>Diagonal</option>
 					</select>
+					<button onclick="return addAnimation()">Add</button>
 				</form>
 			</div>
 		</div>
-		<div class="preview"></div>
+		<div class="preview">
+			<iframe id="iframe_preview" src="URL"></iframe>
+		</div>
 	</head>
 	<script type="text/javascript" src="javascript.js" ></script>
 <html>
