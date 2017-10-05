@@ -87,41 +87,46 @@ function displayAnimation() {
 }
 
 var page = "<!DOCTYPE html><html>";
-var window;
 
 function setTitle() {
 	page += "<title>" + document.getElementById("title_form")[0].value + "</title>";
+	updateIframe();
 	return false;
 }
 
 function addHeader() {
 	page += "<h1 style=\"color:" + document.getElementById("header_form")[1].value + "\">" + document.getElementById("header_form")[0].value + "</h1>";
+	updateIframe();
 	return false;
 }
 
 function addSubheader() {
 	page +=  "<h2 style=\"color:" + document.getElementById("subheader_form")[1].value + "\">" + document.getElementById("subheader_form")[0].value + "</h2>";
+	updateIframe();
 	return false;
 }
 
 function addParagraph() {
 	page += "<p style=\"color:" + document.getElementById("paragraph_form")[1].value + "\">" + document.getElementById("paragraph_form")[0].value + "</p>";
-	alert(page);
+	updateIframe();
 	return false;
 }
 
 function setBackgroundColor() {
-	page += "<style>body{background-color: " + document.getElementById("bg-color_form")[0].value + ";}</style>";
-	alert(page);
+	page += "<style>body{background-color:" + document.getElementById("bg-color_form")[0].value + ";}</style>";
+	updateIframe();
 	return false;
 }
 
 function setBackgroundImage() {
-	//TODO: do this
+	page += "<style>body{background-image: url(\"" + document.getElementById("bg-image_form")[0].value + "\");}</style>";
+	updateIframe();
+	return false;
 }
 
 function addImage() {
 	page += "<img src=\"" + document.getElementsByName("imageInput")[0].value + "\" alt=\"Image not found\" style=\"width:" + document.getElementsByName("imageWidth")[0].value + ";height:" + document.getElementsByName("imageHeight")[0].value + ";\">";
+	updateIframe();
 	return false;
 }
 
@@ -144,6 +149,20 @@ function addAnimation() {
 		page += "<script>function Move() { var elem = document.getElementById(" + "\"" + "animate" + "\""  + "); var pos = 0; var id = setInterval(frame, 5); function frame() { if (pos == 350) { clearInterval(id); } else { pos++;  elem.style.top = pos + 'px';  elem.style.left = pos + 'px'; } } }";			
 		page += "</scr" + "ipt>";
 	}
-	alert(page);
+	//button
+	page += "<button onclick=\"Move()\">Start</button>";
+	updateIframe();
 	return false;
+}
+
+function updateIframe() {
+	iframe = document.getElementById("iframe_preview").contentWindow;
+	iframe.document.open();
+	iframe.document.write(page);
+	iframe.document.close();
+}
+
+function resetPage() {
+	page = "<!DOCTYPE html><html>";
+	updateIframe();
 }
