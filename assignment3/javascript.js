@@ -87,6 +87,7 @@ function displayAnimation() {
 }
 
 var page = "<!DOCTYPE html><html>";
+var animation = false;
 
 function setTitle() {
 	page += "<title>" + document.getElementById("title_form")[0].value + "</title>";
@@ -131,28 +132,35 @@ function addImage() {
 }
 
 function addAnimation() {
-	//container
-	page += "<style>#container{width: " + document.getElementById("container_form")[0].value + "; height: " + document.getElementById("container_form")[1].value + "; postition: relative; background: " + document.getElementById("container_form")[2].value + "; }";
-	//animate
-	page += "#animate { width: " + document.getElementById("animate_form")[0].value + "; height: " + document.getElementById("animate_form")[1].value + "; position: absolute; background-color: " + document.getElementById("animate_form")[2].value + "; }</style><body><div id = \"container\"><div id = \"animate\"></div></div>";	
-	//style
-	var type = document.getElementById("animation-style_form")[0].value;
-	if (type == 1) {
-		page += "<script>function Move() { var elem = document.getElementById(" + "\"" + "animate" + "\""  + "); var pos = 0; var id = setInterval(frame, 5); function frame() { if (pos == 350) { clearInterval(id); } else { pos++;  elem.style.top = pos + 'px'; } } }";
-		page += "</scr" + "ipt>";
+	if (animation === false) {
+		//container
+		page += "<style>#container{width: " + document.getElementById("container_form")[0].value + "; height: " + document.getElementById("container_form")[1].value + "; postition: relative; background: " + document.getElementById("container_form")[2].value + "; }";
+		//animate
+		page += "#animate { width: " + document.getElementById("animate_form")[0].value + "; height: " + document.getElementById("animate_form")[1].value + "; position: absolute; background-color: " + document.getElementById("animate_form")[2].value + "; }</style><body><div id = \"container\"><div id = \"animate\"></div></div>";	
+		//style
+		var type = document.getElementById("animation-style_form")[0].value;
+		if (type == 1) {
+			page += "<script>function Move() { var elem = document.getElementById(" + "\"" + "animate" + "\""  + "); var pos = 0; var id = setInterval(frame, 5); function frame() { if (pos == 350) { clearInterval(id); } else { pos++;  elem.style.top = pos + 'px'; } } }";
+			page += "</scr" + "ipt>";
+		}	
+		else if (type == 2) {
+			page += "<script>function Move() { var elem = document.getElementById(" + "\"" + "animate" + "\""  + "); var pos = 0; var id = setInterval(frame, 5); function frame() { if (pos == 350) { clearInterval(id); } else { pos++;  elem.style.left = pos + 'px'; } } }";
+			page += "</scr" + "ipt>";
+		}
+		else if (type == 3) {
+			page += "<script>function Move() { var elem = document.getElementById(" + "\"" + "animate" + "\""  + "); var pos = 0; var id = setInterval(frame, 5); function frame() { if (pos == 350) { clearInterval(id); } else { pos++;  elem.style.top = pos + 'px';  elem.style.left = pos + 'px'; } } }";			
+			page += "</scr" + "ipt>";
+		}
+		//button
+		page += "<button onclick=\"Move()\">Start</button>";
+		updateIframe();
+		animation = true;
+		return false;
 	}
-	else if (type == 2) {
-		page += "<script>function Move() { var elem = document.getElementById(" + "\"" + "animate" + "\""  + "); var pos = 0; var id = setInterval(frame, 5); function frame() { if (pos == 350) { clearInterval(id); } else { pos++;  elem.style.left = pos + 'px'; } } }";
-		page += "</scr" + "ipt>";
+	else { 
+		alert("You've already added an animation!");
+		return false;
 	}
-	else if (type == 3) {
-		page += "<script>function Move() { var elem = document.getElementById(" + "\"" + "animate" + "\""  + "); var pos = 0; var id = setInterval(frame, 5); function frame() { if (pos == 350) { clearInterval(id); } else { pos++;  elem.style.top = pos + 'px';  elem.style.left = pos + 'px'; } } }";			
-		page += "</scr" + "ipt>";
-	}
-	//button
-	page += "<button onclick=\"Move()\">Start</button>";
-	updateIframe();
-	return false;
 }
 
 function updateIframe() {
