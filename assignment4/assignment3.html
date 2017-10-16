@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" href="styles.css">
+	<head>
+		<div class="navbar">
+			<ul>
+				<li><a href="javascript:void(0)" onclick="displayTitle();">Title</a></li>
+				<li><a href="javascript:void(0)" onclick="displayHeader();">Header</a></li>
+				<li><a href="javascript:void(0)" onclick="displaySubheader();">Subheader</a></li>
+				<li><a href="javascript:void(0)" onclick="displayParagraph();">Paragraph</a></li>
+				<li class="dropdown">
+					<a href="javascript:void(0)" class="dropbtn">Background</a>
+					<div class="dropdown-content">
+						<a href="javascript:void(0)" onclick="displayBackgroundColor();">Color</a>
+						<a href="javascript:void(0)" onclick="displayBackgroundImage();">Image</a>
+					</div>
+				</li>
+				<li><a href="javascript:void(0)" onclick="displayImage();">Image</a></li>
+				<li><a href="javascript:void(0)" onclick="displayAnimation();">Animation</a></li>
+				<li style="float: right;"><a href="javascript:void(0)" onclick="resetPage();">Reset</a></li>
+			</ul>
+		</div>
+		<div class="main">
+			<div id="title">
+				<p>Enter your desired title for this page, it will appear in place of the page's URL when viewed as a tab.</p>
+				<form id="title_form">
+					Title: <input type="text" name="title" value="">
+					<button onclick="return setTitle()">Set</button>
+				</form>
+			</div>
+			<div id="header" style="display:none">
+				<p>Enter the text that you want to appear as a header on the page. This text will be large. You may also select a color.</p>
+				<form id="header_form">
+					Header: <input type="text" name="header" value="">
+					Color:
+					<select name="header-color" value="black">
+						<option value="black">Black</option>
+						<option value="white">White</option>
+						<option value="blue">Blue</option>
+						<option value="purple">Purple</option>
+						<option value="green">Green</option>
+						<option value="yellow">Yellow</option>
+						<option value="orange">Orange</option>
+						<option value="red">Red</option>
+					</select>
+					<button onclick="return addHeader()">Add</button>
+				</form>
+			</div>
+			<div id="subheader" style="display:none">
+				<p>Enter the text you want to appear as a subheader on the page. This text will be medium-sized. You may also select a color.</p>
+				<form id="subheader_form">
+					Subheader: <input type="text" name="subheader" value="">
+					Color:
+					<select name="subheader-color" value="black">
+						<option value="black">Black</option>
+						<option value="white">White</option>
+						<option value="blue">Blue</option>
+						<option value="purple">Purple</option>
+						<option value="green">Green</option>
+						<option value="yellow">Yellow</option>
+						<option value="orange">Orange</option>
+						<option value="red">Red</option>
+					</select>	
+					
+					<button onclick="return addSubheader()">Add</button>
+				</form>
+			</div>
+			<div id="paragraph" style="display:none">
+				<p>Type a paragraph to appear on the page. This will be standard-sized text. You may also select a font color.</p>
+				<form id="paragraph_form">
+					Paragraph: <input type="text" name="paragraph" value="">
+					Color:
+					<select name="paragraph-color" value="black">
+						<option value="black">Black</option>
+						<option value="white">White</option>
+						<option value="blue">Blue</option>
+						<option value="purple">Purple</option>
+						<option value="green">Green</option>
+						<option value="yellow">Yellow</option>
+						<option value="orange">Orange</option>
+						<option value="red">Red</option>
+					</select>	
+					<button onclick="return addParagraph()">Add</button>
+				</form>
+			</div>
+			<div id="bg-color" style="display:none">
+				<p>Select a background color. This will overwrite any background image.</p>
+				<form id="bg-color_form">
+					Background color: 
+					<select name="bg-color" value="white">
+						<option value="white">White</option>
+						<option value="black">Black</option>
+						<option value="blue">Blue</option>
+						<option value="purple">Purple</option>
+						<option value="green">Green</option>
+						<option value="yellow">Yellow</option>
+						<option value="orange">Orange</option>
+						<option value="red">Red</option>
+					</select>
+  				<button onclick="return setBackgroundColor()">Set</button>
+				</form>
+			</div>
+			<div id="bg-image" style="display:none">
+				<p>Enter an image URL to be used as the background of the page. This will overwrite any background color.</p>
+				<form id="bg-image_form">
+					Image (URL): <input type="text" name="image" value="">
+					<button onclick="return setBackgroundImage()">Set</button>
+			</div>
+			<div id="image" style="display:none">
+				<p>Enter an image URL and input your desired dimensions for it.</p>
+				<form id="image_form">
+					Image (URL): <input type="text" name="imageInput" value="">
+					Width: <input type="text" name="imageWidth" value="320px" style="width:40px">
+					Height: <input type="text" name="imageHeight" value="240px" style="width:40px">
+					<button onclick="return addImage()">Add</button>
+				</form>
+			</div>
+			<div id="animation" style="display:none">
+				<p><b><u>Container:________________________________|Animation:______________________________|Style:</u></b></p>
+				<form id="container_form" style="float:left; margin-right:15px">
+					Width: <input type="text" name="containerWidth" value="400px" style="width:40px">
+					Height: <input type="text" name="containerHeight" value="400px" style="width:40px">
+					Color:
+					<select name="container-color" value="black">
+						<option value="black">Black</option>
+						<option value="white">White</option>
+						<option value="blue">Blue</option>
+						<option value="purple">Purple</option>
+						<option value="green">Green</option>
+						<option value="yellow">Yellow</option>
+						<option value="orange">Orange</option>
+						<option value="red">Red</option>
+					</select>
+				</form>
+				<form id="animate_form" style="float:left; margin-right:15px">
+					Width: <input type="text" name="animateWidth" value="50px" style="width:40px"> 
+					Height: <input type="text" name="animateHeight" value="50px" style="width:40px">
+					Color:
+					<select name="animate-color" value="white">
+						<option value="white">White</option>
+						<option value="black">Black</option>
+						<option value="blue">Blue</option>
+						<option value="purple">Purple</option>
+						<option value="green">Green</option>
+						<option value="yellow">Yellow</option>
+						<option value="orange">Orange</option>
+						<option value="red">Red</option>
+					</select>
+				</form>
+				<form id="animation-style_form" style="float:left">
+					<select name="animate-style">
+						<option value=1>Down</option>
+						<option value=2>Right</option>
+						<option value=3>Diagonal</option>
+					</select>
+					<button onclick="return addAnimation()">Add</button>
+				</form>
+			</div>
+		</div>
+		<div class="preview">
+			<iframe id="iframe_preview" src=""></iframe>
+			<table border="1" style="width:100%">
+            <tr>
+                <th>HTML</th>
+                <th>CSS</th>
+                <th>JavaScript</th>
+                <th>XML</th>
+                <th>Others</th>
+            </tr>
+            <tr>
+                <th>Header</th>
+                <th>Text color</th>
+                <th>Event-based actions</th>
+                <th>.</th>
+                <th>.</th>
+            </tr>
+			<tr>
+				<th>Subheader</th>
+				<th>Background color</th>
+                <th>Animation functions</th>
+                <th>.</th>
+                <th>.</th>
+			<tr>
+			<tr>
+				<th>Paragraph</th>
+                <th>Background Image</th>
+                <th>.</th>
+				<th>.</th>
+                <th>.</th>
+            <tr>
+			<tr>
+				<th>Button</th>
+                <th>Create animation elements</th>
+                <th>.</th>
+				<th>.</th>
+                <th>.</th>
+            <tr>
+			<tr>
+				<th>Title</th>
+                <th>Change div color</th>
+                <th>.</th>
+				<th>.</th>
+                <th>.</th>
+            <tr>
+			<tr>
+				<th>Images</th>
+                <th>.</th>
+                <th>.</th>
+				<th>.</th>
+                <th>.</th>
+            <tr>
+        </table>
+		</div>
+	</head>
+	<script type="text/javascript" src="javascript.js" ></script>
+<html>
