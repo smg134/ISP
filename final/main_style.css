@@ -1,0 +1,32 @@
+.page {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: darkslategray;
+}
+
+.titan_panel {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background-color: cadetblue;
+}
+
+.titan_panel .breadcrumbs {
+    position: relative;
+    float: left;
+    width: 1000px;
+    height: 40px;
+    border: 1px solid red;
+}
+
+.breadcrumbs a {
+    
+}
+
+.titan_panel .menu {
+    position: relative;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border: 1px solid red;
+}

@@ -1,9 +1,19 @@
+.page {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: darkslategray;
+}
+
 .login {
-    
+    position: relative;
+    float: left;
+    width: 340px;
+    height: 100%;
+    background-color: cadetblue;
 }
 
 .login h1 {
-    position: relative;
+    position: absolute;
     text-align: left;
     font-size: 32px;
     left: 5%;
