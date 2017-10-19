@@ -1,0 +1,177 @@
+.login {
+    
+}
+
+.login h1 {
+    position: absolute;
+    text-align: left;
+    font-size: 2.3vw;
+    left: 5%;
+}
+
+.login #username {
+    position: absolute;
+    width: 70%;
+    height: 2.3vw;
+    border-radius: 5px;
+    font-size: 2vw;
+    color: dimgray;
+    left: 5%;
+    top: 9vw;
+}
+
+.login #password {
+    position: absolute;
+    width: 70%;
+    height: 2.3vw;
+    border-radius: 5px;
+    font-size: 2vw;
+    left: 5%;
+    top: 12vw;
+}
+
+.login #signin {
+    position: absolute;
+    width: 70%;
+    height: 2.35vw;
+    background-color: bisque;
+    border-radius: 10px;
+    font-size: 1.7vw;
+    left: 5.5%;
+    top: 17vw; 
+}
+
+.login #guest {
+    position: absolute;
+    width: 70%;
+    height: 2.35vw;
+    border-radius: 10px;
+    font-size: 1.7vw;
+    left: 5.5%;
+    top: 19.5vw; 
+}
+
+.login #forgot_password {
+    position: absolute;
+    font-size: 1vw;
+    width: 71%;
+    left: 5%;
+    top: 15vw;
+}
+
+.blur {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.8;
+}
+
+#blur_span {
+    position:absolute; 
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+}
+
+.create_account {
+    display: none;
+    position: absolute;
+    background-color: darkslategray;
+    border: 3px solid black;
+    border-radius: 20px;
+    left: 35vw;
+    top: 10vw;
+    width: 30vw;
+    height: 23vw;
+}
+
+.create_account #first_name {
+    position: absolute;
+    width: 88%;
+    height: 2.3vw;
+    border-radius: 5px;
+    font-size: 2vw;
+    color: dimgray;
+    left: 5%;
+    top: 3vw;
+}
+
+.create_account #last_name {
+    position: absolute;
+    width: 88%;
+    height: 2.3vw;
+    border-radius: 5px;
+    font-size: 2vw;
+    color: dimgray;
+    left: 5%;
+    top: 6vw;
+}
+
+.create_account #username {
+    position: absolute;
+    width: 88%;
+    height: 2.3vw;
+    border-radius: 5px;
+    font-size: 2vw;
+    color: dimgray;
+    left: 5%;
+    top: 9vw;
+}
+
+.create_account #password {
+    position: absolute;
+    width: 88%;
+    height: 2.3vw;
+    border-radius: 5px;
+    font-size: 2vw;
+    left: 5%;
+    top: 12vw;
+}
+
+.create_account #signup {
+    position: absolute;
+    width: 88%;
+    height: 2.35vw;
+    background-color: bisque;
+    border-radius: 10px;
+    font-size: 1.7vw;
+    left: 5.5%;
+    top: 17vw; 
+}
+
+.forgot_password {
+    display: none;
+    position: absolute;
+    background-color: darkslategray;
+    border: 3px solid black;
+    border-radius: 20px;
+    left: 35vw;
+    top: 10vw;
+    width: 30vw;
+    height: 13vw;
+}
+
+.forgot_password #username {
+    position: relative;
+    width: 88%;
+    height: 2.3vw;
+    border-radius: 5px;
+    font-size: 2vw;
+    color: dimgray;
+    left: 5%;
+    top: 3vw;
+}
+
+.forgot_password #signup {
+    position: relative;
+    width: 88%;
+    height: 2.35vw;
+    background-color: bisque;
+    border-radius: 10px;
+    font-size: 1.7vw;
+    left: 5.5%;
+    top: 5vw; 
+}

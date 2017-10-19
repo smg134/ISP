@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">       
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="javascript.js" ></script>
+    </head>
+    <body>
+        <!--Entire page-->
+        <div style="position: absolute; width: 100%; height: 100%; margin: -8px;">
+            <!--Login Section-->
+            <div class="login" style="position: relative; float: left; width: 25%; height: 100%; background-color: cadetblue;">
+                <h1>Title of the webpage goes right here</h1>
+                <form method="post">
+                    <input type="text" id="username" name="username" placeholder="Email">
+                    <input type="password" id="password" name="password" placeholder="Password">
+                    <input type="submit" id="signin" name="signin" value="Sign In">
+                    <input type="submit" id="guest" name="guest" value="Continue as guest">
+                </form>
+                <div id="forgot_password">
+                    <a href="javascript:void(0)" onclick="displayForgotPassword();">Forgot password?</a>
+                    <a style="float: right;" href="javascript:void(0)" onclick="displayCreateAccount();">Create account</a>
+                </div>
+            </div>
+            <!--Info Section-->
+            <div style="position: relative; float: left; width: 75%; height: 100%; background-color: darkslategray">
+            </div>
+            <!--Create Account-->
+            <div class="blur">
+                <a href="javascript:void(0)" onclick="hidePopups();"><span id="blur_span"></span></a>
+            </div>
+            <div class="create_account">
+                <form method="post">
+                    <input type="text" id="first_name" name="first_name" placeholder="First Name">
+                    <input type="text" id="last_name" name="last_name" placeholder="Last Name">
+                    <input type="text" id="username" name="username" placeholder="Email">
+                    <input type="password" id="password" name="password" placeholder="Password">
+                    <input type="submit" id="signup" name="signup" value="Sign Up">
+                </form>
+            </div>
+            <!--Password Recovery-->
+            <div class="forgot_password">
+                <form method="post">
+                    <input type="text" id="username" name="username" placeholder="Email">
+                    <input type="submit" id="signup" name="signup" value="Send Recovery Email">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
