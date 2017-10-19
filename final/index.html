@@ -8,9 +8,9 @@
     </head>
     <body>
         <!--Entire page-->
-        <div style="position: absolute; width: 100%; height: 100%; margin: -8px;">
+        <div style="position: absolute; width: 100%; height: 100%; margin: -8px; background-color: darkslategray;">
             <!--Login Section-->
-            <div class="login" style="position: relative; float: left; width: 25%; height: 100%; background-color: cadetblue;">
+            <div class="login" style="position: relative; float: left; width: 340px; height: 100%; background-color: cadetblue;">
                 <h1>Title of the webpage goes right here</h1>
                 <form method="post">
                     <input type="text" id="username" name="username" placeholder="Email">
@@ -22,9 +22,6 @@
                     <a href="javascript:void(0)" onclick="displayForgotPassword();">Forgot password?</a>
                     <a style="float: right;" href="javascript:void(0)" onclick="displayCreateAccount();">Create account</a>
                 </div>
-            </div>
-            <!--Info Section-->
-            <div style="position: relative; float: left; width: 75%; height: 100%; background-color: darkslategray">
             </div>
             <!--Create Account-->
             <div class="blur">
@@ -43,7 +40,7 @@
             <div class="forgot_password">
                 <form method="post">
                     <input type="text" id="username" name="username" placeholder="Email">
-                    <input type="submit" id="signup" name="signup" value="Send Recovery Email">
+                    <input type="submit" id="recover" name="recover" value="Send Recovery Email">
                 </form>
             </div>
         </div>
