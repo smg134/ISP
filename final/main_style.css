@@ -14,13 +14,43 @@
 .titan_panel .breadcrumbs {
     position: relative;
     float: left;
-    width: 1000px;
+    width: 50%;
     height: 40px;
-    border: 1px solid red;
 }
 
-.breadcrumbs a {
-    
+.titan_panel .breadcrumbs ul {
+    position: relative;
+    list-style-type: none;
+    height: 40px;
+    top: -17px;
+}
+
+.titan_panel .breadcrumbs li {
+    position: relative;
+    float: left;
+    left: -42px;
+    width: 75px;
+    height: 40px;
+    border-top-right-radius: 400px;
+    border-bottom-right-radius: 400px;
+    border: 1px dotted black;
+    background-color: green;
+}
+
+.titan_panel .breadcrumbs a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    left: 10px;
+    top: 10px;
+}
+
+.titan_panel .welcome p {
+    position: relative;
+    float: right;
+    top: -35px;
+    right: 30px;
+    font-size: 36px;
 }
 
 .titan_panel .menu {
@@ -56,4 +86,93 @@
 
 .titan_panel .menu:hover .menu-content{
     display: block;
+}
+
+.modules {
+    position: relative;
+    margin: auto;
+    top: 20%;
+    max-width: 800px;
+    height: 65%;
+}
+
+.module1 {
+    border: 1px solid blue;
+    position: relative;
+    float: left;
+    width: 240px;
+    height: 200px;
+    margin-right: 3%;
+}
+
+.module2 {
+    border: 1px solid blue;
+    position: relative;
+    float: left;
+    width: 240px;
+    height: 200px;
+    margin-right: 3%; 
+}
+
+.module3 {
+    border: 1px solid blue;
+    position: relative;
+    float: left;
+    width: 240px;
+    height: 200px;
+    margin-right: 3%;
+}
+
+.module4 {
+    border: 1px solid blue;
+    position: relative;
+    float: left;
+    width: 240px;
+    height: 200px;
+    top: 10%;
+    margin-right: 3%;
+}
+
+.module5 {
+    border: 1px solid blue;
+    position: relative;
+    float: left;
+    width: 240px;
+    height: 200px;
+    top: 10%;
+    margin-right: 3%;
+}
+
+.module6 {
+    border: 1px solid blue;
+    position: relative;
+    float: left;
+    width: 240px;
+    height: 200px;
+    top: 10%;
+    margin-right: 3%;
+}
+
+.module1:hover {
+    background-color: black;
+}
+
+.module2:hover {
+    background-color: black;
+}
+
+.module3:hover {
+    background-color: black;
+}
+
+.module4:hover {
+    background-color: black;
+}
+
+.module5:hover {
+    background-color: black;
+}
+
+.module6:hover {
+    background-color: black;
 }
