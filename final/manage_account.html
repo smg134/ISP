@@ -39,8 +39,8 @@
                 <p>Email: [GET EMAIL WITH PHP HERE]</p>
                 <p>Premium Status: [GET PREMIUM STATUS WITH PHP HERE]</p>
                 <br>
-                <button onclick="return displayChangeEmail();">Change Email</button>
-                <button onclick="return displayChangePassword();">Change Password</button>
+                <button onclick="return displayChangeEmail();" style="cursor:pointer">Change Email</button>
+                <button onclick="return displayChangePassword();" style="cursor:pointer">Change Password</button>
                 <div class="change_email">
                     <form method="post">
                         Current Email: <input type="text" name="old_email" placeholder="Current Email" style="position:relative;left:5px;">
@@ -49,7 +49,7 @@
                         <br>
                         Confirm Email: <input type="text" name="confirm_email" placeholder="Confirm New Email">
                         <br>
-                        <input type="submit" value="Change">
+                        <input type="submit" value="Change" style="cursor:pointer">
                         <button onclick="return hideChangeEmail()"><b>X</b></button>
                     </form>
                 </div> <!--Change Email-->
@@ -61,7 +61,7 @@
                         <br>
                         Confirm Password: <input type="text" name="confirm_password" placeholder="Confirm New Password">
                         <br>
-                        <input type="submit" value="Change">
+                        <input type="submit" value="Change" style="cursor:pointer">
                         <button onclick="return hideChangePassword()"><b>X</b></button>
                     </form>
                 </div> <!--Change Password-->
@@ -70,7 +70,7 @@
                 <h3>Sign up for Premium</h3>
                 <p>[DESCRIPTION OF PREMIUM BENEFITS HERE]</p>
                 <!--Set up a system to get whether the user is already premium and dont display this portion if they are-->
-                <input type="submit" value="Get Premium!">
+                <input type="submit" value="Get Premium!" style="cursor:pointer">
                 <hr>
                 <h2><a href="" style="text-decoration:none; color:blue;">View data analytics</a></h2>
             </div> <!--Content-->
