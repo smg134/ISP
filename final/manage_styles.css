@@ -92,91 +92,54 @@ body {
     display: block;
 }
 
-.modules {
+.content {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 50px;
+    left: 50px;
+}
+
+.change_email {
+    border: 3px solid black;
+    border-radius: 10px;
+    display: none;
+    margin: 10px;
+}
+
+.change_email input {
+    margin: 5px;
+}
+
+.change_email button {
     position: relative;
-    margin: auto;
-    top: 20%;
-    max-width: 800px;
-    height: 65%;
+    float: right;
+    right: 10px;
+    top: -90px;
+    background-color: transparent;
+    border: 2px solid black;
+    outline: none;
+    cursor: pointer;
 }
 
-.module1 {
-    border: 1px solid blue;
+.change_password {
+    border: 3px solid black;
+    border-radius: 10px;
+    display: none;
+    margin: 10px;
+}
+
+.change_password input {
+    margin: 5px;
+}
+
+.change_password button {
     position: relative;
-    float: left;
-    width: 240px;
-    height: 200px;
-    margin-right: 3%;
-}
-
-.module2 {
-    border: 1px solid blue;
-    position: relative;
-    float: left;
-    width: 240px;
-    height: 200px;
-    margin-right: 3%; 
-}
-
-.module3 {
-    border: 1px solid blue;
-    position: relative;
-    float: left;
-    width: 240px;
-    height: 200px;
-    margin-right: 3%;
-}
-
-.module4 {
-    border: 1px solid blue;
-    position: relative;
-    float: left;
-    width: 240px;
-    height: 200px;
-    top: 10%;
-    margin-right: 3%;
-}
-
-.module5 {
-    border: 1px solid blue;
-    position: relative;
-    float: left;
-    width: 240px;
-    height: 200px;
-    top: 10%;
-    margin-right: 3%;
-}
-
-.module6 {
-    border: 1px solid blue;
-    position: relative;
-    float: left;
-    width: 240px;
-    height: 200px;
-    top: 10%;
-    margin-right: 3%;
-}
-
-.module1:hover {
-    background-color: black;
-}
-
-.module2:hover {
-    background-color: black;
-}
-
-.module3:hover {
-    background-color: black;
-}
-
-.module4:hover {
-    background-color: black;
-}
-
-.module5:hover {
-    background-color: black;
-}
-
-.module6:hover {
-    background-color: black;
+    float: right;
+    right: 10px;
+    top: -90px;
+    background-color: transparent;
+    border: 2px solid black;
+    outline: none;
+    cursor: pointer;
 }
