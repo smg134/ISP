@@ -12,7 +12,7 @@
             <!--Login Section-->
             <div class="login">
                 <h1>Title of the webpage goes right here</h1>
-                <form method="post">
+                <form action="login.php" method="post">
                     <input type="text" id="username" name="username" placeholder="Email">
                     <input type="password" id="password" name="password" placeholder="Password">
                     <input type="submit" id="signin" name="signin" value="Sign In" style="cursor:pointer">
@@ -28,18 +28,18 @@
                 <a href="javascript:void(0)" onclick="hidePopups();"><span id="blur_span"></span></a>
             </div>
             <div class="create_account">
-                <form method="post">
+                <form action="login.php" method="post">
                     <input type="text" id="first_name" name="first_name" placeholder="First Name">
                     <input type="text" id="last_name" name="last_name" placeholder="Last Name">
-                    <input type="text" id="username" name="username" placeholder="Email">
-                    <input type="password" id="password" name="password" placeholder="Password">
+                    <input type="text" id="username" name="new_username" placeholder="Email">
+                    <input type="password" id="password" name="new_password" placeholder="Password">
                     <input type="submit" id="signup" name="signup" value="Sign Up" style="cursor:pointer">
                 </form>
             </div>
             <!--Password Recovery-->
             <div class="forgot_password">
-                <form method="post">
-                    <input type="text" id="username" name="username" placeholder="Email">
+                <form action="login.php" method="post">
+                    <input type="text" id="recover_username" name="recover_username" placeholder="Email">
                     <input type="submit" id="recover" name="recover" value="Send Recovery Email" style="cursor:pointer">
                 </form>
             </div>
